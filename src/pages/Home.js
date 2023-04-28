@@ -1,5 +1,5 @@
-/*
- * Copyright (c) 2018-Present, Okta, Inc. and/or its affiliates. All rights reserved.
+/*!
+ * Copyright (c) 2017-Present, Okta, Inc. and/or its affiliates. All rights reserved.
  * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
  *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
@@ -11,16 +11,15 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './App';
-import './index.css';
+import logo from '../assets/logo.svg';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Router>
+const Home = () => {
+    return (
+        <>
+            <h1 className='page-header'>Home</h1>
+            <img src={logo} className="App-logo" alt="logo" />
+        </>
+    );
+};
 
-    < App />
-  </Router>
-
-);
+export default Home;

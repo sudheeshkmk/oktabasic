@@ -1,5 +1,5 @@
-/*
- * Copyright (c) 2018-Present, Okta, Inc. and/or its affiliates. All rights reserved.
+/*!
+ * Copyright (c) 2017-Present, Okta, Inc. and/or its affiliates. All rights reserved.
  * The Okta software accompanied by this notice is provided pursuant to the Apache License, Version 2.0 (the "License.")
  *
  * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
@@ -11,16 +11,16 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './App';
-import './index.css';
+import { Link } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Router>
+const Nav = () => {
+    return (
+        <nav>
+            <Link id='home-nav-link' to='/'>Home</Link>
+            <Link id='protected-nav-link' to='/protected'>Protected</Link>
+            <Link id='profile-nav-link' to='/profile'>Profile</Link>
+        </nav>
+    );
+};
 
-    < App />
-  </Router>
-
-);
+export default Nav;
